@@ -1,0 +1,58 @@
+import java.util.*;
+
+public class StringMethodsExample {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = input.nextLine();
+        
+        // length()
+        System.out.println("Length of the string: " + str.length());
+        
+        // charAt()
+        System.out.print("Character at position 2: ");
+        System.out.println(str.charAt(2));
+        
+        // substring()
+        System.out.print("Substring from index 2 to 5: ");
+        System.out.println(str.substring(2, 5));
+        
+        // indexOf()
+        System.out.print("Index of 'o' in the string: ");
+        System.out.println(str.indexOf('o'));
+        
+        // lastIndexOf()
+        System.out.print("Last index of 'o' in the string: ");
+        System.out.println(str.lastIndexOf('o'));
+        
+        // equals()
+        System.out.print("Is the string equal to 'hello'?: ");
+        System.out.println(str.equals("hello"));
+        
+        // equalsIgnoreCase()
+        System.out.print("Is the string equal to 'Hello' (ignoring case)?: ");
+        System.out.println(str.equalsIgnoreCase("Hello"));
+        
+        // startsWith()
+        System.out.print("Does the string start with 'he'?: ");
+        System.out.println(str.startsWith("he"));
+        
+        // endsWith()
+        System.out.print("Does the string end with 'lo'?: ");
+        System.out.println(str.endsWith("lo"));
+        
+        // toUpperCase()
+        System.out.print("Uppercase version of the string: ");
+        System.out.println(str.toUpperCase());
+        
+        // toLowerCase()
+        System.out.print("Lowercase version of the string: ");
+        System.out.println(str.toLowerCase());
+        
+        // replace()
+        System.out.print("Replace 'l' with 'x' in the string: ");
+        System.out.println(str.replace('l', 'x'));
+        
+        input.close();
+    }
+}
