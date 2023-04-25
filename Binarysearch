@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class BinarySearchExample {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // Get the sorted array from user input
+        System.out.print("Enter the size of the sorted array: ");
+        int size = input.nextInt();
+        int[] arr = new int[size];
+        System.out.print("Enter the elements of the sorted array in ascending order: ");
+        for (int i = 0; i < size; i++) {
+            arr[i] = input.nextInt();
+        }
+        
+        // Get the element to search for from user input
+        System.out.print("Enter the element to search for: ");
+        int key = input.nextInt();
+        
+        // Perform binary search on the sorted array
+        int index = Arrays.binarySearch(arr, key);
+        
+        // Print the result of the search
+        if (index >= 0) {
+            System.out.println("Element found at index " + index);
+        } else {
+            System.out.println("Element not found in the array");
+        }
+        
+        input.close();
+    }
+}
