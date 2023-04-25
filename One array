@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ArrayCopy {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // input the size of the array
+        System.out.println("Enter the size of the array: ");
+        int size = scanner.nextInt();
+
+        // create the original array and input its elements
+        int[] originalArray = new int[size];
+        System.out.println("Enter the elements of the original array: ");
+        for (int i = 0; i < size; i++) {
+            originalArray[i] = scanner.nextInt();
+        }
+
+        // create the new array and copy the elements from the original array
+        int[] newArray = new int[originalArray.length];
+        for (int i = 0; i < originalArray.length; i++) {
+            newArray[i] = originalArray[i];
+        }
+
+        // print the original array and the new array
+        System.out.println("Original array: ");
+        for (int i = 0; i < originalArray.length; i++) {
+            System.out.print(originalArray[i] + " ");
+        }
+        System.out.println();
+        System.out.println("New array: ");
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.print(newArray[i] + " ");
+        }
+        System.out.println();
+    }
+}
