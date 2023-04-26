@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class ArithmeticOperations {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        double num1 = input.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double num2 = input.nextDouble();
+
+        double sum = add(num1, num2);
+        System.out.println("Sum of " + num1 + " and " + num2 + " is: " + sum);
+
+        double difference = subtract(num1, num2);
+        System.out.println("Difference between " + num1 + " and " + num2 + " is: " + difference);
+
+        double product = multiply(num1, num2);
+        System.out.println("Product of " + num1 + " and " + num2 + " is: " + product);
+
+        double quotient = divide(num1, num2);
+        if (Double.isNaN(quotient)) {
+            System.out.println("Division by zero is not possible!");
+        } else {
+            System.out.println("Quotient of " + num1 + " and " + num2 + " is: " + quotient);
+        }
+    }
+
+    public static double add(double num1, double num2) {
+        return num1 + num2;
+    }
+
+    public static double subtract(double num1, double num2) {
+        return num1 - num2;
+    }
+
+    public static double multiply(double num1, double num2) {
+        return num1 * num2;
+    }
+
+    public static double divide(double num1, double num2) {
+        if (num2 == 0) {
+            return Double.NaN;
+        } else {
+            return num1 / num2;
+        }
+    }
+}
