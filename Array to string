@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class ArrayToString {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the size of the array: ");
+        int size = input.nextInt();
+
+        int[] arr = new int[size];
+
+        System.out.println("Enter " + size + " integers:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = input.nextInt();
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < size; i++) {
+            sb.append(arr[i]);
+            if (i != size - 1) {
+                sb.append(",");
+            }
+        }
+
+        String str = sb.toString();
+
+        System.out.println("The integer array as a string is: " + str);
+    }
+}
