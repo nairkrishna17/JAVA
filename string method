@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class StringMethods {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = input.nextLine();
+
+        // Printing the original string
+        System.out.println("The original string is: " + str);
+
+        // Printing the length of the string
+        System.out.println("The length of the string is: " + str.length());
+
+        // Printing the substring from index 2 to 5
+        System.out.println("The substring from index 2 to 5 is: " + str.substring(2, 5));
+
+        // Printing the index of the first occurrence of 'a'
+        System.out.println("The index of the first occurrence of 'a' is: " + str.indexOf('a'));
+
+        // Printing the index of the last occurrence of 'a'
+        System.out.println("The index of the last occurrence of 'a' is: " + str.lastIndexOf('a'));
+
+        // Converting the string to uppercase
+        System.out.println("The string in uppercase is: " + str.toUpperCase());
+
+        // Converting the string to lowercase
+        System.out.println("The string in lowercase is: " + str.toLowerCase());
+
+        // Replacing all occurrences of 'o' with 'e'
+        System.out.println("The string with all occurrences of 'o' replaced with 'e' is: " + str.replace('o', 'e'));
+
+        // Checking if the string contains the word "hello"
+        if (str.contains("hello")) {
+            System.out.println("The string contains the word 'hello'");
+        } else {
+            System.out.println("The string does not contain the word 'hello'");
+        }
+    }
+}
